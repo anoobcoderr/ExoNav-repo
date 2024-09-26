@@ -1,0 +1,392 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0e13;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #1c1f24;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    z-index: 100;
+    
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 60%;
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: 600;
+}
+
+nav ul li a.active,
+nav ul li a:hover {
+    color: #ff8800;
+    background-color: #3a3f47;
+    border-radius: 8px;
+}
+
+
+.user-notification-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-icon, .notification-icon {
+    height: 30px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+.user-icon:hover, .notification-icon:hover {
+    transform: scale(1.1);
+    background-color: #3a3f47;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ff8800; 
+    padding: 10px 0;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu li a {
+    display: block;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #3a3f47;
+    border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+ 
+.feature-section {
+    padding: 100px 20px; 
+    background-color: #1c1f24;
+    color: #c8df18;
+    text-align: center;
+}
+
+
+
+.feature-section h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ff0000 !important; 
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7); 
+}
+
+
+
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Each feature box */
+.feature-box {
+    background-color: #252a31;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+ /*.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.7);
+} */
+
+.feature-box h3 {
+    font-size: 1.8rem;
+    color: #ff8800;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1.1rem;
+    color: #ffffffb3;
+    margin-bottom: 20px;
+}
+
+.content-section {
+    padding: 100px 20px; 
+    background-color: #1c1f24;
+    color: #eaeaea;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.content-section h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #ffaa00;
+    text-shadow: 0px 0px 10px rgba(0, 201, 255, 0.7);
+}
+
+.method-description {
+    font-size: 1.2rem;
+    color: #ffffffb3;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.method-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.method-list li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.method-list li strong {
+    color: #ff8800;
+}
+
+/* Responsive design for smaller screens 
+@media (max-width: 768px) {
+    .content-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .method-description {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-section h1 {
+        font-size: 2rem;
+    }
+
+    .method-description {
+        font-size: 0.9rem;
+    }
+}*/
+
+.view-btn {
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #e07b00;
+}
+
+
+@media (max-width: 768px) {
+    .feature-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .feature-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .feature-box p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-section h1 {
+        font-size: 2rem;
+    }
+
+    .feature-box h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-box p {
+        font-size: 0.9rem;
+    }
+}
+
+
+.view-btn {
+    padding: 10px 20px;
+    background-color: #ff8800;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #ec730a;
+}
+
+
+/* Hero Section */
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle at 50% 50%, #001d3d, #000000);
+    overflow: hidden;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #00c9ff;
+    text-shadow: 0px 0px 10px rgba(0, 201, 255, 0.7);
+}
+
+.hero-content p {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+    color: #ffffffb3;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.explore-btn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background-color: #ec730a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.explore-btn:hover {
+    background-color: #ff8800;
+}
+
+/* Floating planets */
+.planet {
+    position: absolute;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.5);
+    animation: float 8s ease-in-out infinite;
+}
+
+.planet1 {
+    width: 120px;
+    height: 120px;
+    top: 15%;
+    left: 10%;
+    background: radial-gradient(circle, #ffdf00, #ff8800);
+}
+
+.planet2 {
+    width: 180px;
+    height: 180px;
+    top: 70%;
+    right: 15%;
+    background: radial-gradient(circle, #00ffdd, #0077b6);
+    animation-delay: 2s;
+}
+
+.planet3 {
+    width: 100px;
+    height: 100px;
+    bottom: 10%;
+    left: 70%;
+    background: radial-gradient(circle, #ff007b, #ff00a8);
+    animation-delay: 4s;
+}
+
+/* Animation for floating effect */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    background-image: url('https://www.transparenttextures.com/patterns/black-linen.png'); /* Subtle star-like texture */
+    z-index: -1;
+    opacity: 0.5;
+}
